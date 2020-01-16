@@ -43,7 +43,15 @@
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
           id="378eb92c-44ba-412b-879d-3af35a01b048" name="Operational Activities">
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-            id="96a4a306-dd4c-49c5-806e-49cc2925fd40" name="Root Operational Activity"/>
+            id="96a4a306-dd4c-49c5-806e-49cc2925fd40" name="Root Operational Activity">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="ecd0bdb0-d87c-4c97-b2cb-ba0b49b3ee2b" name="accuillire le client"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="0139a635-4661-4fcf-956e-10ae7ea8f2c9" name="prevenir l'hotaisse"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="c806eb18-6956-436e-881b-d1ab50a8ccac" name="signal" target="#ecd0bdb0-d87c-4c97-b2cb-ba0b49b3ee2b"
+              source="#0139a635-4661-4fcf-956e-10ae7ea8f2c9"/>
+        </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
           id="6e343643-115a-4933-85e4-26362831e7bb" name="Operational Capabilities"/>
@@ -54,7 +62,32 @@
       <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="981a1cf1-eb53-4a0d-bb7d-7e6ad59ef141"
           name="Roles"/>
       <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="77bb1564-c059-45aa-8cd0-be41dfe937cb"
-          name="Operational Entities"/>
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="eeb2ebdc-aef4-49bb-aabc-1fcf21df61d1"
+            name="hotel" abstractType="#6c096613-a004-4463-a7e2-2bd34b9a1169"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="6c096613-a004-4463-a7e2-2bd34b9a1169"
+            name="hotel">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="c02ec041-8ef9-4e67-b4c1-624d569fe41f"
+              name="hotaisse" abstractType="#6f8b31ab-2d52-45d0-abcd-24aa10c593f0"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="dcba472a-b171-43d5-8e55-8258b46ddf5a"
+              name="client" abstractType="#97ab325a-815b-479b-b902-536cc30e0f99"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="6f8b31ab-2d52-45d0-abcd-24aa10c593f0"
+              name="hotaisse" actor="true" human="true">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="66ba291d-5f23-4823-b8e2-6693b965bd3b" targetElement="#ecd0bdb0-d87c-4c97-b2cb-ba0b49b3ee2b"
+                sourceElement="#6f8b31ab-2d52-45d0-abcd-24aa10c593f0"/>
+          </ownedEntities>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="97ab325a-815b-479b-b902-536cc30e0f99"
+              name="client" actor="true" human="true">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="117f53df-3e29-4999-a1f5-8fee6679b019" targetElement="#0139a635-4661-4fcf-956e-10ae7ea8f2c9"
+                sourceElement="#97ab325a-815b-479b-b902-536cc30e0f99"/>
+          </ownedEntities>
+          <ownedCommunicationMeans xsi:type="org.polarsys.capella.core.data.oa:CommunicationMean"
+              id="c81a7384-0eed-4d11-8236-6563d6256c8b" name="son" source="#97ab325a-815b-479b-b902-536cc30e0f99"
+              target="#6f8b31ab-2d52-45d0-abcd-24aa10c593f0"/>
+        </ownedEntities>
+      </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
         id="a9ebfece-2fea-4b87-9cbf-38f6fd5ad190" name="System Analysis">
@@ -62,9 +95,32 @@
           id="2b2aa937-dab8-4d0f-9ed6-296b25d05c9a" name="System Functions">
         <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
             id="087931c6-aad5-4c19-b7e2-31ba70bddef0" name="Root System Function">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="4f0f7da3-ca74-4344-8494-e0335e52bcc8" name="accuillire le client">
+            <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                id="72acd8c2-fca8-4aaf-b17c-4b3f683b629c" name="insignal"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="901c4caf-6812-4f2c-9130-75b13e8b405e" targetElement="#ecd0bdb0-d87c-4c97-b2cb-ba0b49b3ee2b"
+                sourceElement="#4f0f7da3-ca74-4344-8494-e0335e52bcc8"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="7cc1e224-c592-458f-9a9e-7a06b8b66251" name="prevenir l'hotaisse">
+            <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                id="8b47dc99-fdc7-4133-b990-5468adfd10c5" name="outsignal"/>
+            <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
+                id="4bd341d3-8a44-4732-a633-79c4236a96ca" targetElement="#0139a635-4661-4fcf-956e-10ae7ea8f2c9"
+                sourceElement="#7cc1e224-c592-458f-9a9e-7a06b8b66251"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="93e30a24-37c5-4295-ba9c-29872bdbb5a1" targetElement="#96a4a306-dd4c-49c5-806e-49cc2925fd40"
               sourceElement="#087931c6-aad5-4c19-b7e2-31ba70bddef0"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7ce8d728-3d42-4c9a-a713-93a13e1a3a20" name="signal" target="#72acd8c2-fca8-4aaf-b17c-4b3f683b629c"
+              source="#8b47dc99-fdc7-4133-b990-5468adfd10c5">
+            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
+                id="d36b734e-014a-4c8d-8c1f-8f4da37214ed" targetElement="#c806eb18-6956-436e-881b-d1ab50a8ccac"
+                sourceElement="#7ce8d728-3d42-4c9a-a713-93a13e1a3a20"/>
+          </ownedFunctionalExchanges>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
@@ -168,15 +224,70 @@
       </ownedDataPkg>
       <ownedSystemComponentPkg xsi:type="org.polarsys.capella.core.data.ctx:SystemComponentPkg"
           id="0e30c1e8-0f62-43bc-80a8-736cf67c0c95" name="Structure">
+        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+            id="d25e94cb-0ef1-4fc9-a50f-8677c6283220" targetElement="#c02ec041-8ef9-4e67-b4c1-624d569fe41f"
+            sourceElement="#41b57a6f-1eff-474b-adab-bb08c0d9404a"/>
+        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+            id="2b5c4d4a-3df6-40e8-9a7a-d938a6b55e7e" targetElement="#dcba472a-b171-43d5-8e55-8258b46ddf5a"
+            sourceElement="#45466267-ebf5-407b-a86d-779de090c7d7"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="b0b72a43-19a0-4699-8b66-3e9636e85c76"
-            name="System" abstractType="#930fc203-d657-4b9c-8b45-6751282b7b4d"/>
+            name="sonnette" abstractType="#930fc203-d657-4b9c-8b45-6751282b7b4d"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="43dc4402-af3d-4790-ad1c-86058ca09279"
+            name="Client" abstractType="#7da588d6-282e-4942-a43f-6a18f7672ee0"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="b037626f-ddc0-4665-ae9a-4b9b9d940b1f"
+            name="hotaisse" abstractType="#85e54eda-5595-48d9-ae1c-c48538f60a11"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="41b57a6f-1eff-474b-adab-bb08c0d9404a"
+            name="hotaisse" abstractType="#2fc32b1c-25ca-4a1c-8051-8ce3260ee9f6"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="45466267-ebf5-407b-a86d-779de090c7d7"
+            name="client" abstractType="#e60e830b-a6ba-4551-8278-9c7efe2e58a1"/>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="b7ff35b7-4b13-48d1-949f-959a26aef3d7" name="son" source="#06ed885a-8083-4a93-b367-b7e2031097d0"
+            target="#e6e28d6b-6bcd-4162-95b4-3c4f7d32dbf0" kind="FLOW">
+          <ownedComponentExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeRealization"
+              id="f7fc8b30-554a-4522-a9bd-60b42c3bb9b7" targetElement="#c81a7384-0eed-4d11-8236-6563d6256c8b"
+              sourceElement="#b7ff35b7-4b13-48d1-949f-959a26aef3d7"/>
+        </ownedComponentExchanges>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
-            id="930fc203-d657-4b9c-8b45-6751282b7b4d" name="System">
+            id="930fc203-d657-4b9c-8b45-6751282b7b4d" name="sonnette">
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
               id="731398f5-e8c3-4b7c-96d6-c2fc7dc095ad" name="System State Machine">
             <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
                 id="ad473cb0-0d2f-4105-aa79-50991178edc4" name="Default Region"/>
           </ownedStateMachines>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="7da588d6-282e-4942-a43f-6a18f7672ee0" name="Client" actor="true"/>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="85e54eda-5595-48d9-ae1c-c48538f60a11" name="hotaisse" actor="true"/>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="2fc32b1c-25ca-4a1c-8051-8ce3260ee9f6" name="hotaisse" actor="true">
+          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+              id="a1eaaf5e-6669-4592-94b7-1c73fba6475b" targetElement="#66ba291d-5f23-4823-b8e2-6693b965bd3b"
+              sourceElement="#990d2681-77ef-41fb-a685-b38eaa4aa014"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="990d2681-77ef-41fb-a685-b38eaa4aa014" targetElement="#4f0f7da3-ca74-4344-8494-e0335e52bcc8"
+              sourceElement="#2fc32b1c-25ca-4a1c-8051-8ce3260ee9f6"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="e6e28d6b-6bcd-4162-95b4-3c4f7d32dbf0" name="inson" orientation="IN"
+              kind="FLOW"/>
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="05fbe26f-638c-4c51-85e3-e26f76044cef" targetElement="#6f8b31ab-2d52-45d0-abcd-24aa10c593f0"
+              sourceElement="#2fc32b1c-25ca-4a1c-8051-8ce3260ee9f6"/>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="e60e830b-a6ba-4551-8278-9c7efe2e58a1" name="client" actor="true">
+          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
+              id="1d7c6670-a0e7-4af6-93fb-4e4350559695" targetElement="#117f53df-3e29-4999-a1f5-8fee6679b019"
+              sourceElement="#7e1b6f80-3126-4714-b327-9bd275f6b62e"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="7e1b6f80-3126-4714-b327-9bd275f6b62e" targetElement="#7cc1e224-c592-458f-9a9e-7a06b8b66251"
+              sourceElement="#e60e830b-a6ba-4551-8278-9c7efe2e58a1"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="06ed885a-8083-4a93-b367-b7e2031097d0" name="outson" orientation="OUT"
+              kind="FLOW"/>
+          <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
+              id="6cee7d2a-6b6b-4588-bdfb-166f2c53a49b" targetElement="#97ab325a-815b-479b-b902-536cc30e0f99"
+              sourceElement="#e60e830b-a6ba-4551-8278-9c7efe2e58a1"/>
         </ownedSystemComponents>
       </ownedSystemComponentPkg>
       <ownedMissionPkg xsi:type="org.polarsys.capella.core.data.ctx:MissionPkg" id="0782c9ac-1f63-43f0-80aa-6a2a1d567c43"
