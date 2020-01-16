@@ -1031,15 +1031,10 @@
       <ownedPhysicalComponentPkg xsi:type="org.polarsys.capella.core.data.pa:PhysicalComponentPkg"
           id="cfbc3cd5-851e-4753-ba10-b9a8f1bc08b8" name="Physical function">
         <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-            id="c7bce9f2-2df6-4db5-acc0-a60ec877d210" targetElement="#a210c260-5425-4892-95a5-dad4568abf3a"
-            sourceElement="#058e23a8-aa27-442c-8edb-4f56e6055380"/>
-        <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
             id="dfc6f336-1707-40fa-a515-a928a67254d5" targetElement="#7d93f58c-d6d9-40db-b3e8-abaf45996392"
             sourceElement="#d166ad12-1bfc-4025-91a9-4988a1298e4d"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="379fcdf3-ecd3-448b-9c72-1d93d9e83a10"
             name="Physical System" abstractType="#9383d8cd-c09c-4655-a77e-db5f943e2b6a"/>
-        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="058e23a8-aa27-442c-8edb-4f56e6055380"
-            name="Hotesse"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="d166ad12-1bfc-4025-91a9-4988a1298e4d"
             name="Client" abstractType="#5269cba4-ea7b-4b9a-833d-fcb660dc755b"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="9ab5bcae-3774-47e9-ba4d-102ffe0a16c9"

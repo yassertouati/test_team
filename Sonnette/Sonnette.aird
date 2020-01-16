@@ -18,7 +18,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_1DB_gDfDEeqR8fEOyiZ0Vw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_qj23ozfTEeqR8fEOyiZ0Vw" name="[PAB] Physical Architecture mechanique" repPath="#_qju70DfTEeqR8fEOyiZ0Vw" changeId="1899216c-c368-462e-87df-9336cb71a888">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_qj23ozfTEeqR8fEOyiZ0Vw" name="[PAB] Physical Architecture mechanique" repPath="#_qju70DfTEeqR8fEOyiZ0Vw" changeId="29d03ac6-9b5b-4556-9303-d414ea4f213c">
         <eAnnotations xmi:type="description:DAnnotation" uid="_qk_gEDfTEeqR8fEOyiZ0Vw" source="https://www.polarsys.org/capella/dannotation/DesactivatedFilters">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qk_gETfTEeqR8fEOyiZ0Vw" key="hide.computed.component.exchanges.filter" value="true"/>
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qk_gEjfTEeqR8fEOyiZ0Vw" key="hide.computed.physical.links.filter" value="true"/>
@@ -2153,15 +2153,6 @@
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_qj4FwDfTEeqR8fEOyiZ0Vw" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_qj4FwTfTEeqR8fEOyiZ0Vw" type="Sirius" element="_qju70DfTEeqR8fEOyiZ0Vw" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_Kl3wtDfWEeqR8fEOyiZ0Vw" type="2002" element="_KlmD4DfWEeqR8fEOyiZ0Vw">
-          <children xmi:type="notation:Node" xmi:id="_Kl4XwDfWEeqR8fEOyiZ0Vw" type="5006"/>
-          <children xmi:type="notation:Node" xmi:id="_Kl4XwTfWEeqR8fEOyiZ0Vw" type="7001">
-            <styles xmi:type="notation:SortingStyle" xmi:id="_Kl4XwjfWEeqR8fEOyiZ0Vw"/>
-            <styles xmi:type="notation:FilteringStyle" xmi:id="_Kl4XwzfWEeqR8fEOyiZ0Vw"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Kl3wtTfWEeqR8fEOyiZ0Vw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kl3wtjfWEeqR8fEOyiZ0Vw" x="860" y="50" height="473"/>
-        </children>
         <children xmi:type="notation:Node" xmi:id="_kNKegDfXEeqR8fEOyiZ0Vw" type="2002" element="_kM_fYDfXEeqR8fEOyiZ0Vw">
           <children xmi:type="notation:Node" xmi:id="_kNKegzfXEeqR8fEOyiZ0Vw" type="5006"/>
           <children xmi:type="notation:Node" xmi:id="_kNKehDfXEeqR8fEOyiZ0Vw" type="7001">
@@ -2535,17 +2526,6 @@
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_KlmD4DfWEeqR8fEOyiZ0Vw">
-      <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Sonnette.melodymodeller#058e23a8-aa27-442c-8edb-4f56e6055380"/>
-      <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Sonnette.melodymodeller#058e23a8-aa27-442c-8edb-4f56e6055380"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tMMX8Dg4Eeqa3si-SS71cQ" borderSize="1" borderSizeComputationExpression="1" borderColor="128,128,128" backgroundStyle="GradientTopToBottom" backgroundColor="234,234,234" foregroundColor="205,205,205">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']/@style"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_2:ContainerMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/physical.odesign#//@ownedViewpoints[name='Physical%20Architecture']/@ownedRepresentations[name='Physical%20Architecture%20Blank']/@defaultLayer/@containerMappings[name='PAB_PC']"/>
-    </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_kM_fYDfXEeqR8fEOyiZ0Vw" name="Client">
       <target xmi:type="org.polarsys.capella.core.data.cs:Part" href="Sonnette.melodymodeller#d166ad12-1bfc-4025-91a9-4988a1298e4d"/>
       <semanticElements xmi:type="org.polarsys.capella.core.data.cs:Part" href="Sonnette.melodymodeller#d166ad12-1bfc-4025-91a9-4988a1298e4d"/>
